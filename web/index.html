@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="forumApp">
+<head>
+    <meta charset="UTF-8">
+    <title>forum</title>
+    <script src="./libs/angular/angular.min.js"></script>
+    <script src="./app.js"></script>
+    <link href="./style.css" rel="stylesheet" />
+</head>
+<body ng-controller="forumController">
+
+    <div class="container">
+        <div class="messages">
+            <div class="message" ng-repeat="message in messages">
+                <div class="message-static">
+                    <p class="title" ng-hide="message.isEditing">{{message.title}}</p>
+                    <p class="body" ng-hide="message.isEditing">{{message.body}}</p>
+                    <div class="title" ng-show="message.isEditing">
+                        <input type="text" placeholder="title" ng-model="message.title">
+                    </div>
+                    <div class="body" ng-show="message.isEditing">
+                        <input type="text" placeholder="title" ng-model="message.body">
+                    </div>
+                </div>
+                <div class="message-buttons">
+                    <input type="button" value="Text" ng-click="getMessageBody(message)" ng-show="!message.isEditing && !message.isDeleting">
+                    <input type="button" value="Save" ng-click="updateMessage(message)" ng-show="message.isEditing">
+                    <input type="button" value="Cancel" ng-click="cancelEditMessage(message)" ng-show="message.isEditing">
+                    <input type="button" value="Edit" ng-click="editMessage(message)" ng-show="!message.isEditing && !message.isDeleting">
+                    <input type="button" value="Delete" ng-click="deleteConfirm(message)" ng-show="!message.isEditing && !message.isDeleting">
+                    <input type="button" value="Ok" ng-click="deleteMessage(message)" ng-show="message.isDeleting">
+                    <input type="button" value="Cancel" ng-click="deleteCancel(message)" ng-show="message.isDeleting">
+                </div>
+            </div>
+        </div>
+        <div class="input">
+            <input type="text" placeholder="Title" ng-model="newMessage.title">
+            <input type="text" placeholder="Message" ng-model="newMessage.body">
+            <input type="button" value="Send" ng-click="createMessage()">
+        </div>
+        <div class="error">
+            <p>{{error}}</p>
+        </div>
+    </div>
+
+</body>
+</html>

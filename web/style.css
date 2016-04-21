@@ -1,0 +1,30 @@
+.container{
+    width:400px;
+}
+.message{
+    background:#ddd;
+    border: 1px solid #888;
+    padding: 5px;
+}
+.message-static{
+    background:#FFF;
+}
+.message-static p, .message-static div{
+    margin:0;
+    padding:5px;
+}
+.message-static .title{
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.message-static .body{
+    font-size: 14px;
+}
+.message-buttons{
+    padding: 5px;
+    border-top: 1px solid #999;
+    text-align: right;
+}
+.input{
+    padding-top: 10px;
+}

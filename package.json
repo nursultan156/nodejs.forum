@@ -1,0 +1,21 @@
+{
+  "name": "forum",
+  "version": "1.0.0",
+  "description": "test forum task",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "author": "nursultan",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "mocha": "^2.4.5",
+    "mongodb": "^2.1.16",
+    "should": "^8.3.1",
+    "supertest": "^1.2.0"
+  }
+}
