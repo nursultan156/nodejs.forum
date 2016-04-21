@@ -1,6 +1,6 @@
 # nodejs.forum
 
-run server.js (starts api)
-run web.js (starts static)
-npm test (run tests)
+run server.js (starts api)<br>
+run web.js (starts static)<br>
+npm test (run tests)<br>
 config.js (configuration of mongodb host, port; api port, web port)
