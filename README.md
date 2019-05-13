@@ -8,3 +8,4 @@ npm test (run tests)<br>
 config.js (configuration of mongodb host, port; api port, web port)
 
 test
+test commit via ssh
